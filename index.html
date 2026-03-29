@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Violeta Wonex</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+/* --- ФОН САЙТА В ЧЕРНО-СЕРЫХ ОТТЕНКАХ --- */
+body {
+    margin:0;
+    font-family:'Montserrat', sans-serif;
+    color:#eee;
+    background: #1a1a1a; /* темный серый */
+    background-image: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+}
+
+/* --- HERO / ВЕРХ --- */
+.hero{
+    background: #111; /* чуть темнее фона */
+    text-align:center;
+    padding:50px 20px 30px;
+    color:#fff;
+    border-bottom:2px solid #444;
+}
+
+.logo{
+    width:180px;
+    margin-bottom:20px;
+    border-radius:12px;
+    border:2px solid #555;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+    transition: transform 0.3s;
+}
+.logo:hover{
+    transform: scale(1.05);
+}
+
+/* --- МЕНЮ РАЗДЕЛОВ --- */
+.menu{
+    margin:20px 0;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+}
+.menu a{
+    color:#eee;
+    text-decoration:none;
+    font-weight:600;
+    padding:8px 16px;
+    border-radius:12px;
+    transition:0.3s;
+    background: rgba(255,255,255,0.05);
+}
+.menu a:hover{
+    background: rgba(255,255,255,0.15);
+}
+
+/* --- КОНТАКТЫ --- */
+.contacts{
+    display:flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    gap:15px;
+    font-size:14px;
+    margin-top:10px;
+    align-items:center;
+}
+
+.contacts a, .contacts p{
+    display:flex;
+    align-items:center;
+    gap:5px;
+    color:#eee;
+    text-decoration:none;
+    font-weight:600;
+    padding:8px 14px;
+    border-radius:12px;
+    transition:0.3s;
+    background: rgba(255,255,255,0.05);
+}
+
+.contacts a.instagram{
+    background:#555;
+    color:#fff;
+}
+.contacts a.instagram:hover{
+    background:#777;
+}
+.contacts a:hover{
+    background: rgba(255,255,255,0.15);
+}
+.contacts p{
+    background: rgba(255,255,255,0.05);
+}
+
+/* --- СЕКЦИИ --- */
+section{
+    padding:20px;
+}
+h2{
+    margin:20px 0;
+    color:#eee;
+}
+
+/* --- СЕТКА ПРОДУКТОВ --- */
+.products{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:12px;
+}
+
+/* --- КАРТОЧКА --- */
+.card{
+    background:#222; /* темный серый для карточки */
+    border-radius:12px;
+    padding:10px;
+    position:relative;
+    color:#eee;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+/* ИЗОБРАЖЕНИЕ */
+.card img{
+    width:100%;
+    height:150px;
+    object-fit:contain;
+}
+
+
+
+/* ТЕКСТ */
+.price{
+    font-weight:600;
+    margin-top:5px;
+    color:#eee;
+}
+.old{
+    text-decoration:line-through;
+    color:#999;
+    font-size:12px;
+}
+.sizes{
+    font-size:12px;
+    color:#ccc;
+}
+
+/* ЦВЕТА */
+.colors{
+    display:flex;
+    gap:5px;
+    margin-top:5px;
+}
+.color{
+    width:12px;
+    height:12px;
+    border-radius:3px;
+    border:1px solid #555;
+    cursor:pointer;
+}
+
+/* КНОПКИ */
+.btn{
+    display:block;
+    text-align:center;
+    background:#333;
+    color:#fff;
+    padding:6px;
+    border-radius:8px;
+    text-decoration:none;
+    margin-top:6px;
+    font-size:12px;
+    transition:0.3s;
+}
+.btn:hover{
+    background:#555;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ВЕРХ -->
+<section class="hero">
+   <img src="img/logo.jpg" class="logo">
+
+    <nav class="menu">
+        <a href="#men">Чоловіче</a>
+        <a href="#women">Жіноче</a>
+        <a href="#kids">Дитяче</a>
+    </nav>
+
+    <div class="contacts">
+        <a class="instagram" href="https://www.instagram.com/violetawonex_shoes_?igsh=ZjU3MDBuMngyM3dz">
+            📸 Instagram
+        </a>
+        <a href="tel:+380XXXXXXXXX">
+            📞 +38 068 171 30 80
+        </a>
+        <p>📍 м. Одеса, вул. Філатова 33а</p>
+    </div>
+</section>
+
+<!-- ЧОЛОВІЧЕ -->
+<section id="men">
+<h2>Чоловіче</h2>
+<div class="products">
+    <div class="card">
+
+<img id="men1" src="img/men-1-brown.jpg">
+<p class="price">2800 грн</p>
+<p class="sizes">36-41</p>
+<p><b>Д8070А</b></p>
+<div class="colors">
+  <div class="color" style="background:brown" onclick="change('men1','img/men-1-brown.jpg')"></div>
+  <div class="color" style="background:beige" onclick="change('men1','img/men-1-beige.jpg')"></div>
+  <div class="color" style="background:white" onclick="change('men1','img/men-1-white.jpg')"></div>
+  <div class="color" style="background:lightblue" onclick="change('men1','img/men-1-blue.jpg')"></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- ЖІНОЧЕ -->
+<section id="women">
+<h2>Жіноче</h2>
+<div class="products">
+<div class="card">
+
+<img id="women1" src="img/women-1-green.jpg">
+<p class="price">1500 грн</p>
+<p><b>20-1034</b></p>
+<p class="sizes">36-45</p>
+<div class="colors">
+  <div class="color" style="background:#7CFC00" onclick="change('women1','img/women-1-green.jpg')"></div>
+  <div class="color" style="background:purple" onclick="change('women1','img/women-1-purple.jpg')"></div>
+  <div class="color" style="background:olive" onclick="change('women1','img/women-1-olive.jpg')"></div>
+  <div class="color" style="background:lightblue" onclick="change('women1','img/women-1-blue.jpg')"></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ДИТЯЧЕ -->
+<section id="kids">
+<h2>Дитяче</h2>
+<div class="products">
+<div class="card">
+
+<img id="kids1" src="img/kids-1-gray.jpg">
+
+<p class="price">1500 грн</p>
+<p class="sizes">33-37</p>
+<p><b>DK1 (26017)</b></p>
+
+
+<div class="colors">
+  <div class="color" style="background:lightgray" onclick="change('kids1','img/kids-1-gray.jpg')"></div>
+  <div class="color" style="background:white" onclick="change('kids1','img/kids-1-beige.jpg')"></div>
+  <div class="color" style="background:#333" onclick="change('kids1','img/kids-1-black.jpg')"></div>
+</div>
+</div>
+</div>
+</section>
+
+<script>
+function change(id, img){
+    document.getElementById(id).src = img;
+}
+</script>
+
+</body>
+</html>
